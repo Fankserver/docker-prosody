@@ -7,3 +7,5 @@ RUN apt-get update -qq \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y prosody libssl1.0.0 lua-sec lua-event lua-zlib lua-socket liblua5.1-expat0 liblua5.1-filesystem0 \
     && rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["prosody"]
