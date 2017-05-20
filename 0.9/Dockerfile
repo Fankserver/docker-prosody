@@ -10,13 +10,13 @@ RUN apt-get update -qq \
 	&& hg clone https://hg.prosody.im/prosody-modules /usr/src/modules \
 
 	&& cd /usr/src/prosody \
-	&& apt-get install lua5.1 luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev -yqqq \
+	&& apt-get install lua5.1 liblua5.1-0-dev luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev -yqqq \
 	&& luarocks install luasec \
 	&& luarocks install luaexpat \
 	&& luarocks install luasocket \
 	&& luarocks install luafilesystem \
 	&& luarocks install luabitop \
-	&& ./configure --prefix=/ \
+	&& ./configure --prefix=/ --with-lua-include=/usr/include/lua5.1 \
 	&& make \
 	&& make install \
 	&& patch -p1 /etc/prosody/prosody.cfg.lua < /usr/src/prosody.cfg.lua.patch \
