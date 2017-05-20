@@ -44,7 +44,6 @@ modules_enabled = {
 	-- Usefull modules
 		"idlecompat";
 		"incidents_handling"; -- It will let you manage reports, inquiries, requests and responses through an Adhoc interface.
-		"json_streams"; -- Simply loading this module makes Prosody accept JSON on C2S streams
 		"spam_reporting"; -- When someone reports spam or abuse, a line about this is logged and an event is fired so that other modules can act on the report.
 		"server_contact_info"; -- This module lets you advertise various contact addresses for your XMPP service.
 		"ipcheck"; -- This simple XEP allows the client to ask the server for the IP address it is connected from.
