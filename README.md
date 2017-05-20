@@ -16,6 +16,7 @@ The images exposes the following ports
 * __443__: HTTPS
 * __5222__: c2s
 * __5269__: s2s
+* __5347__: XMPP component
 * __5280__: HTTP BOSH
 * __5281__: HTTPS BOSH
 
@@ -25,6 +26,8 @@ The images exposes the following ports
     * Generated prosody configuration file
 * __/etc/prosody/conf.d__:
     * Custom prosody configuration file(s)
+    * Preset:
+        * [Recommended configuration](examples/recommended.cfg.lua)
 * __/etc/prosody/certs__:
     * SSL certificates
 * __/var/log/prosody__:
@@ -39,5 +42,5 @@ The images exposes the following ports
 
 ### Configuration
 
-By default, the __prosody.cfg.lua__ should be not __overwritten__.
+By default, the __prosody.cfg.lua__ should be not __overwritten__, if you want to overwrite it here is the [original file](examples/default.cfg.lua).
 There is a `/etc/prosody/conf.d/` folder where `*.lua` can be added, which will be included by prosody and configuration can be added and changed, but not __extended__ from those files!
