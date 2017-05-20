@@ -23,24 +23,25 @@ The images exposes the following ports
 ### Folders
 
 * __/etc/prosody__:
-    * Generated prosody configuration file
+	* Generated prosody configuration file
 * __/etc/prosody/conf.d__:
-    * Custom prosody configuration file(s)
-    * Preset:
-        * [Recommended configuration](examples/recommended.cfg.lua)
+	* Custom prosody configuration file(s)
+	* Preset:
+		* [Recommended configuration](examples/recommended.cfg.lua)
 * __/etc/prosody/certs__:
-    * SSL certificates
+	* SSL certificates
 * __/var/log/prosody__:
-    * Log files for prosody
-    * Note: logfiles are disabled by default, because they only log to console for docker.
+	* Log files for prosody
+	* Note: logfiles are disabled by default, because they only log to console for docker.
 * __/usr/src/prosody__:
-    * Prosody source code
-    * Note: will only be used for the build process and for debugging purpose.
+	* Prosody source code
+	* Note: will only be used for the build process and for debugging purpose.
 * __/usr/src/modules__:
-    * Community modules source code
-    * Note: this folder will be included by `prosody.cfg.lua` so you only need to include them in the `modules_enabled`.
+	* Community modules source code
+	* Note: this folder will be included by `prosody.cfg.lua` so you only need to include them in the `modules_enabled`.
 
 ### Configuration
 
 By default, the __prosody.cfg.lua__ should be not __overwritten__, if you want to overwrite it here is the [original file](examples/default.cfg.lua).
+
 There is a `/etc/prosody/conf.d/` folder where `*.lua` can be added, which will be included by prosody and configuration can be added and changed, but not __extended__ from those files!
