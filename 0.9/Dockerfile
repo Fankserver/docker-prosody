@@ -16,6 +16,7 @@ RUN apt-get update -qq \
 	&& luarocks install luasocket \
 	&& luarocks install luafilesystem \
 	&& luarocks install luabitop \
+	&& luarocks install lua-zlib \
 	&& ./configure --prefix=/ \
 	&& make \
 	&& make install \
