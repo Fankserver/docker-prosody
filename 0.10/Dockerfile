@@ -10,7 +10,7 @@ RUN apt-get update -qq \
 	&& hg clone https://hg.prosody.im/prosody-modules /usr/src/modules \
 
 	&& cd /usr/src/prosody \
-	&& apt-get install lua5.1 luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev -yqqq \
+	&& apt-get install lua5.1 luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev libevent1-dev libmysqlclient-dev libpq-dev libsqlite3-dev -yqqq \
 	&& luarocks install luasec \
 	&& luarocks install luaevent \
 	&& luarocks install luaexpat \
@@ -18,8 +18,8 @@ RUN apt-get update -qq \
 	&& luarocks install luafilesystem \
 	&& luarocks install luabitop \
 	&& luarocks install lua-zlib \
-	&& luarocks install luadbi-mysql \
-	&& luarocks install luadbi-postgresql \
+	&& luarocks install luadbi-mysql MYSQL_INCDIR=/usr/include/mysql \
+	&& luarocks install luadbi-postgresql POSTGRES_INCDIR=/usr/include/postgresql \
 	&& luarocks install luadbi-sqlite3 \
 	&& ./configure --prefix=/ \
 	&& make \
