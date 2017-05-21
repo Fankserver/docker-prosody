@@ -12,10 +12,15 @@ RUN apt-get update -qq \
 	&& cd /usr/src/prosody \
 	&& apt-get install lua5.1 liblua5.1-0-dev luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev -yqqq \
 	&& luarocks install luasec \
+	&& luarocks install luaevent \
 	&& luarocks install luaexpat \
 	&& luarocks install luasocket \
 	&& luarocks install luafilesystem \
 	&& luarocks install luabitop \
+	&& luarocks install lua-zlib \
+	&& luarocks install luadbi-mysql \
+	&& luarocks install luadbi-postgresql \
+	&& luarocks install luadbi-sqlite3 \
 	&& ./configure --prefix=/ --with-lua-include=/usr/include/lua5.1 \
 	&& make \
 	&& make install \
