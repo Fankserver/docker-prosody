@@ -30,6 +30,8 @@ The images exposes the following ports
 		* [Recommended configuration](examples/recommended.cfg.lua)
 * __/etc/prosody/certs__:
 	* SSL certificates
+* __/var/lib/prosody__:
+	* Prosody data folder
 * __/var/log/prosody__:
 	* Log files for prosody
 	* Note: logfiles are disabled by default, because they only log to console for docker.
