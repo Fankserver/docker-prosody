@@ -6,7 +6,7 @@ This docker images is build from the [Prosody source](https://hg.prosody.im/).
 
 Docker image based on __Ubuntu 16.04 LTS__.
 ```bash
-docker run -d --name prosody -p 5222:5222 fankserver/prosody
+docker run -d --name prosody -p 5222:5222 fankserver/prosody:0.10-dev
 ```
 
 ### Ports
@@ -48,7 +48,7 @@ By default, the __prosody.cfg.lua__ should be not __overwritten__, if you want t
 
 There is a `/etc/prosody/conf.d/` folder where `*.lua` can be added, which will be included by prosody and configuration can be added and changed, but not __extended__ from those files!
 
-### Examples
+## Examples
 
 - Easy setup [Docker compose for prosody](examples/basic)
 - [Docker compose for prosody & PostgreSQL](examples/basic_database)
