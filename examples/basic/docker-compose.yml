@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  prosody:
+    image: fankserver/prosody:0.10-dev
+    ports:
+      - mode: host
+        target: 5222
+        published: 5222
+      - mode: host
+        target: 5269
+        published: 5269
+      - mode: host
+        target: 5280
+        published: 5280
+      - mode: host
+        target: 5281
+        published: 5281

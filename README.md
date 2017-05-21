@@ -34,7 +34,7 @@ The images exposes the following ports
 	* Prosody data folder
 * __/var/log/prosody__:
 	* Log files for prosody
-	* Note: logfiles are disabled by default, because they only log to console for docker.
+	* Note: logfiles are disabled by default, because they only log to stdout & stderr for docker.
 * __/usr/src/prosody__:
 	* Prosody source code
 	* Note: will only be used for the build process and for debugging purpose.
@@ -47,3 +47,8 @@ The images exposes the following ports
 By default, the __prosody.cfg.lua__ should be not __overwritten__, if you want to overwrite it here is the [original file](examples/default.cfg.lua).
 
 There is a `/etc/prosody/conf.d/` folder where `*.lua` can be added, which will be included by prosody and configuration can be added and changed, but not __extended__ from those files!
+
+### Examples
+
+- Easy setup [Docker compose for prosody](examples/basic)
+- [Docker compose for prosody & PostgreSQL](examples/basic_database)
