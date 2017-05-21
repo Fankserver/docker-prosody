@@ -20,6 +20,7 @@ RUN apt-get update -qq \
 	&& make \
 	&& make install \
 	&& patch -p1 /etc/prosody/prosody.cfg.lua < /usr/src/prosody.cfg.lua.patch \
+	&& mkdir -p /etc/prosody/conf.d
 	&& useradd -ms /bin/bash prosody \
 	&& chown -R prosody /etc/prosody \
 	&& chown -R prosody /var/lib/prosody \
