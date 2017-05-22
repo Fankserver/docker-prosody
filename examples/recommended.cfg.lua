@@ -59,4 +59,7 @@ modules_enabled = {
 --   support = { "http://shakespeare.lit/support.php", "xmpp:support@shakespeare.lit" };
 -- };
 
+-- Hashing passwords in the data store protects them from immediate use by anyone with access to the store, as the original password cannot be easily recovered.
+authentication = "internal_hashed"
+
 s2s_secure_auth = true
