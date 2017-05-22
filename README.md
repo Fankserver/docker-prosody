@@ -38,7 +38,7 @@ The images exposes the following ports
 * __/usr/src/prosody__:
 	* Prosody source code
 	* Note: will only be used for the build process and for debugging purpose.
-* __/usr/src/modules__:
+* __/usr/src/prosody_modules__:
 	* Community modules source code
 	* Note: this folder will be included by `prosody.cfg.lua` so you only need to include them in the `modules_enabled`.
 
