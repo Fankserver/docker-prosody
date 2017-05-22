@@ -7,7 +7,7 @@ COPY ./prosody.cfg.lua.patch /usr/src/prosody.cfg.lua.patch
 RUN apt-get update -qq \
 	&& apt-get install mercurial -yqqq \
 	&& hg clone https://hg.prosody.im/0.9 /usr/src/prosody \
-	&& hg clone https://hg.prosody.im/prosody-modules /usr/src/modules \
+	&& hg clone https://hg.prosody.im/prosody-modules /usr/src/prosody_modules \
 
 	&& cd /usr/src/prosody \
 	&& apt-get install lua5.1 liblua5.1-0-dev luarocks libexpat1-dev libssl-dev bsdmainutils git libidn11-dev libevent1-dev libmysqlclient-dev libpq-dev libsqlite3-dev -yqqq \
