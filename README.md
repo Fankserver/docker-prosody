@@ -2,6 +2,12 @@
 
 This docker images is build from the [Prosody source](https://hg.prosody.im/).
 
+# Supported tags and respective `Dockerfile` links
+
+- [`trunk`, `latest` (*trunk/Dockerfile*)](https://github.com/Fankserver/docker-prosody/blob/master/trunk/Dockerfile)
+- [`0.10-dev` (*0.10/Dockerfile*)](https://github.com/Fankserver/docker-prosody/blob/master/0.10/Dockerfile)
+- [`0.9-dev`, `0.9.12`, `stable` (*0.9/Dockerfile*)](https://github.com/Fankserver/docker-prosody/blob/master/0.9/Dockerfile)
+
 ## Running
 
 Docker image based on __Ubuntu 16.04 LTS__.
