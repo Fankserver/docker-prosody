@@ -1,0 +1,16 @@
+17a18,19
+> daemonize = false
+> plugin_paths = { "/usr/src/prosody_modules" }
+142,143c144,145
+< 	info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
+< 	error = "prosody.err";
+---
+> 	-- info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
+> 	-- error = "prosody.err";
+145c147
+< 	-- "*console"; -- Log to the console, useful for debugging with daemonize=false
+---
+> 	"*console"; -- Log to the console, useful for debugging with daemonize=false
+184a187,188
+> 
+> Include "/etc/prosody/conf.d/*.lua"
