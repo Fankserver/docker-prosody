@@ -12,7 +12,7 @@ This docker images is build from the [Prosody source](https://hg.prosody.im/).
 
 Docker image based on __Ubuntu 16.04 LTS__.
 ```bash
-docker run -d --name prosody -p 5222:5222 fankserver/prosody:0.10-dev
+docker run -d --name prosody -p 5222:5222 -p 5269:5269 -p 5280:5280 -p 5281:5281 fankserver/prosody
 ```
 
 ### Ports
