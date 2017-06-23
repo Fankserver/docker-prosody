@@ -22,7 +22,7 @@ RUN apt-get update -qq \
 	&& git clone https://github.com/mwild1/luadbi.git \
 	&& cd luadbi \
 	&& make free \
-	&& cp ./*.lua ./*.so /usr/lib/lua/5.1/ \
+	&& cp ./*.lua ./*.so /usr/lib/x86_64-linux-gnu/lua/5.1/ \
 	&& cd .. \
 	&& rm luadbi -rf \
 
